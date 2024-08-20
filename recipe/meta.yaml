@@ -1,5 +1,5 @@
 {% set name = "itrm" %}
-{% set version = "1.0.17" %}
+{% set version = "1.0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/itrm-{{ version }}.tar.gz
-  sha256: 642945703f6119e010743fa1410b02c4d6e67e9d64c14170a28a25aaaec82594
+  sha256: b78df30eac5ced4a94f6061019a4d2b0727bb59cfb820c891081dce3245638cd
 
 build:
   noarch: python
@@ -17,11 +17,12 @@ build:
 requirements:
   host:
     - python >=3.7
-    - setuptools >=42
+    - setuptools >=45
     - pip
   run:
     - python >=3.7
     - numpy
+    - scipy
 
 test:
   imports:
