@@ -1,5 +1,5 @@
 {% set name = "itrm" %}
-{% set version = "1.0.18" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/itrm-{{ version }}.tar.gz
-  sha256: b78df30eac5ced4a94f6061019a4d2b0727bb59cfb820c891081dce3245638cd
+  sha256: f57736452c58e9d0b3d8530ad8cd83e5faa819d722e8097e7cffa90aeefe3973
 
 build:
   noarch: python
