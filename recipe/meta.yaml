@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/itrm-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/itrm-{{ version }}.tar.gz
   sha256: b4c439bacfae6c45f1132d5c7c70474f4622ed3c59b59ef454c3671393aaeefd
 
 build:
