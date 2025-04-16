@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  name: itrm
+  version: 1.4.19
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/itrm-${{ version }}.tar.gz
+  sha256: 6635f160e32faa5a0afa9080366c9b08e5de06dde9780d5da0d178c760f179ef
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=45
+    - wheel
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - numpy
+
+tests:
+  - python:
+      imports:
+        - itrm
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: Interactive Terminal Utilities
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://gitlab.com/davidwoodburn/itrm
+
+extra:
+  recipe-maintainers:
+    - thewchan
