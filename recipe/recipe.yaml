@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: itrm
-  version: "1.4.23"
+  version: "1.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/itrm-${{ version }}.tar.gz
-  sha256: 0c31854290ddce271d43b1e45f49bb7bc395cde5b634e72a566f15e75247a95d
+  sha256: 08522186ed0e2a27cac7993798d215faa67af5181e5509fc8ad63c73a17cc000
 
 build:
   number: 0
